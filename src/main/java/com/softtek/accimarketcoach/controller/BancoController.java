@@ -89,6 +89,8 @@ public class BancoController {
 			msg = this.bancoService.deleteBanco(id);
 		}
 		
+		
+		System.out.println("para ver los conflictos del merge");
 		return msg;
 	}	
 }
