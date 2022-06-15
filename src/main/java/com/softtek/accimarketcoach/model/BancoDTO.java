@@ -9,12 +9,7 @@ public class BancoDTO {
 	
 	private String nombre;	
 	private DetallesBancoDTO detallesBancoDTO;
-	
-	public BancoDTO(Integer idBanco, String nombre) {
-		this.idBanco = idBanco;
-		this.nombre = nombre;
-	}
-	
+		
 	public Integer getIdBanco() {
 		return idBanco;
 	}

@@ -28,6 +28,7 @@ public class BancoBusiness implements BancoService {
 	public List<BancoDTO> getAllBancos() {
 		// TODO Auto-generated method stub
 		return this.bancoMapper.findAll();
+		//return null;
 	}
 
 	@Override
