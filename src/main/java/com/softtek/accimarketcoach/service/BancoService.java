@@ -1,6 +1,7 @@
 package com.softtek.accimarketcoach.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import com.softtek.accimarketcoach.model.BancoDTO;
 
@@ -18,4 +19,6 @@ public interface BancoService {
 	String insertBanco(BancoDTO banco);
 	String updateBanco(BancoDTO banco);
 	String deleteBanco(int id);
+	
+	double suma(double valor1, double valor2);
 }

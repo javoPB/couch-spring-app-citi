@@ -60,4 +60,10 @@ public class BancoBusiness implements BancoService {
 		return "El banco se elimino exitosamente.";
 	}
 
+	@Override
+	public double suma(double valor1, double valor2) {
+		// TODO Auto-generated method stub
+		return valor1 + valor2;
+	}
+
 }
