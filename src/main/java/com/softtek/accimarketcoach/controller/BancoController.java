@@ -3,7 +3,6 @@ package com.softtek.accimarketcoach.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -13,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.softtek.accimarketcoach.business.BancoBusiness;
 import com.softtek.accimarketcoach.model.BancoDTO;
 import com.softtek.accimarketcoach.service.BancoService;
 
@@ -57,23 +55,25 @@ public class BancoController {
 	}
 	
 	@PostMapping("/create")
-	public String insertar(@RequestBody BancoDTO banco){
+	public String insertar(@RequestBody BancoDTO nombre){
 		
 		System.out.println("********************************************************************************************************");
-		System.out.println("***********************" + banco.getDetallesBancoDTO().toString());
+		System.out.println("***********************" + nombre.getNombre().toString());
 		System.out.println("********************************************************************************************************");
-		String msg = this.bancoService.insertBanco(banco);
+		String msg = this.bancoService.insertBanco(nombre);
 		
 		return msg;
 	}
 	
+
+
 	@PutMapping("/put/{id}")
 	public String update(@RequestBody BancoDTO banco, @PathVariable int id){
 		String msg = "El registro no existe.";
 				
 		BancoDTO bancosRespuesta = this.bancoService.getOneBanco(id);
 		if( bancosRespuesta != null ) {
-			banco.setIdBanco(id);
+			banco.setId(id);
 			msg = this.bancoService.updateBanco(banco);
 		}
 		
@@ -88,6 +88,7 @@ public class BancoController {
 		if( bancosRespuesta != null ) {
 			msg = this.bancoService.deleteBanco(id);
 		}
+		
 		
 		System.out.println("para ver los conflictos del merge - desde el repositorio");
 		return msg;

@@ -37,17 +37,17 @@ public class BancoBusiness implements BancoService {
 	}
 
 	@Override
-	public String insertBanco(BancoDTO banco) {
+	public String insertBanco(BancoDTO nombre) {
 		// TODO Auto-generated method stub
-		this.bancoMapper.insert(banco);
+		this.bancoMapper.insert(nombre);
 		
 		return "El banco se inserto exitosamente.";
 	}
 
 	@Override
-	public String updateBanco(BancoDTO banco) {
+	public String updateBanco(BancoDTO nombre) {
 		// TODO Auto-generated method stub
-		this.bancoMapper.update(banco);
+		this.bancoMapper.update(nombre);
 		
 		return "El banco se actualizo exitosamente.";
 	}

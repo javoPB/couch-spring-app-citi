@@ -5,16 +5,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 //@Alias("BancoDTO")
 public class BancoDTO {
 	@JsonProperty("id_banco")
-	private Integer idBanco;
+	private long id;
+	private String nombre;
+	private String email;	
+	private int prioridad;
 	
-	private String nombre;	
-	private DetallesBancoDTO detallesBancoDTO;
-	
-	public Integer getIdBanco() {
-		return idBanco;
+	public long getId() {
+		return id;
 	}
-	public void setIdBanco(Integer idBanco) {
-		this.idBanco = idBanco;
+	public void setId(Integer id) {
+		this.id = id;
 	}
 	public String getNombre() {
 		return nombre;
@@ -22,11 +22,17 @@ public class BancoDTO {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public DetallesBancoDTO getDetallesBancoDTO() {
-		return detallesBancoDTO;
+	public String getEmail() {
+		return email;
 	}
-	public void setDetallesBancoDTO(DetallesBancoDTO detallesBancoDTO) {
-		this.detallesBancoDTO = detallesBancoDTO;
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public Integer getPrioridad() {
+		return prioridad;
+	}
+	public void setEmail(Integer prioridad) {
+		this.prioridad = prioridad;
 	}
 	
 }
