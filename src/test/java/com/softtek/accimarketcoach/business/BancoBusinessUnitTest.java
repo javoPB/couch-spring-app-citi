@@ -27,14 +27,15 @@ public class BancoBusinessUnitTest {
 		System.out.println("-------------- INICIANDO PRUEBA UNITARIA (UNIT TEST). --------------");
 		
 		this.bancoBusiness = new BancoBusiness();
+		this.bancoDTO = new BancoDTO();
 	}
 	
 	@Test
 	@DisplayName("Pruebas Unitarias - Método Suma()")
 	public void testSuma() {
 		System.out.println("\t\t\t testSuma()");
-		double suma = this.bancoBusiness.suma(1, 2);
-		double resultadoEsperado = 3;
+		double suma = this.bancoBusiness.suma(1.0, 2.0);
+		double resultadoEsperado = 3.0;
 		
 		//Valida si resultadoEsperado = resultado obtenido.
 		Assertions.assertEquals(resultadoEsperado, suma);
