@@ -73,6 +73,7 @@
 		</dependency>
 	</dependencies>
 
+	<!-- Se debe vizualizar este comentario en el POM -->	
 	<build>
 		<plugins>
 			<plugin>
